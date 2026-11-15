@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descrever o Gerenciamento e a Governança do Azure — IFS Lagarto</title>
+<link rel="stylesheet" href="./css/style.css">
+<!-- O script fica no <head> (sem defer) para que o fallback de imagens exista antes de qualquer onerror. -->
+<script src="./js/script.js"></script>
+</head>
+<body>
+
+<div id="barra"></div>
+
+<main id="deck">
+
+<!-- ======================================================
+     SLIDE 1 — CAPA
+     ====================================================== -->
+<section class="slide capa" id="capa">
+  <div class="capa-in">
+    <div class="logo-wrap">
+      <img src="./modulo 1 imagens/logo ifs.png" alt="Logomarca IFS" data-logo data-mod="1" onerror="imgFallback(this)">
+    </div>
+
+    <div class="inst-bloco">
+      <div class="inst-nome">Instituto Federal de Sergipe (IFS) – Campus Lagarto</div>
+      <div class="inst-sub">Bacharelado em Sistemas de Informação</div>
+      <div class="disc"><b>Disciplina:</b> Sistemas Distribuídos</div>
+    </div>
+
+    <div class="titulo-bloco">
+      <div class="atividade">Parte III – Seminário sobre Roteiro de Aprendizado Microsoft Learn</div>
+      <h1>Descrever o Gerenciamento e a Governança do Azure</h1>
+    </div>
+
+    <div class="prof"><b>Professor:</b> Prof. Wilhelm de Araujo Rodrigues</div>
+    <div class="alunos-lab">Discentes:</div>
+    <div class="alunos">
+      <div>Lucas Emanuel Dias dos Santos Oliveira</div>
+      <div>Marcos Vinicius dos Santos Xavier</div>
+      <div>Rauan Phelipe Nascimento de Jesus</div>
+      <div>Victor Silva do Valle</div>
+    </div>
+
+    <div class="local">Lagarto – SE, Novembro de 2026</div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SLIDES 2–3 — SUMÁRIO (estilo capítulos de livro)
+     ====================================================== -->
+<section class="slide" id="sumario1" data-cap="Sumário">
+  <div class="s-body">
+    <div class="kicker">Sumário</div>
+    <h2>Capítulos 1 e 2</h2>
+    <div class="toc dois">
+
+      <div class="toc-cap">
+        <div class="cap-head" data-goto="cap1"><span class="cap-n">Capítulo 1</span><span class="cap-t">Descrever o gerenciamento de custos no Azure</span><span class="cap-p"></span></div>
+        <div class="toc-item" data-goto="c1-fatores"><span class="t">Fatores que afetam os custos</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c1-precos"><span class="t">Modelos de preços e descontos</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c1-calc"><span class="t">Calculadora de preços do Azure</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c1-cm"><span class="t">Gerenciamento de Custos da Microsoft</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c1-alertas"><span class="t">Alertas de custo e orçamentos</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c1-tags"><span class="t">Tags (etiquetas) de recursos</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c1-guia"><span class="t">Otimização de custos: guia de decisão</span><span class="dots"></span><span class="p"></span></div>
+      </div>
+
+      <div class="toc-cap">
+        <div class="cap-head" data-goto="cap2"><span class="cap-n">Capítulo 2</span><span class="cap-t">Descrever os recursos e as ferramentas de governança e conformidade no Azure</span><span class="cap-p"></span></div>
+        <div class="toc-item" data-goto="c2-purview"><span class="t">Microsoft Purview</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c2-policy"><span class="t">Azure Policy</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c2-iniciativas"><span class="t">Iniciativas do Azure Policy</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c2-locks"><span class="t">Bloqueios de recursos (Resource Locks)</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c2-stp"><span class="t">Portal de Confiança do Serviço</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c2-stp2"><span class="t">Recursos do Portal e governança com IA</span><span class="dots"></span><span class="p"></span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="sumario2" data-cap="Sumário">
+  <div class="s-body">
+    <div class="kicker">Sumário</div>
+    <h2>Capítulos 3 e 4 e Referências</h2>
+    <div class="toc dois">
+
+      <div class="toc-cap">
+        <div class="cap-head" data-goto="cap3"><span class="cap-n">Capítulo 3</span><span class="cap-t">Descrever as ferramentas de monitoramento no Azure</span><span class="cap-p"></span></div>
+        <div class="toc-item" data-goto="c3-advisor"><span class="t">Assistente do Azure (Azure Advisor)</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c3-health"><span class="t">Integridade do Serviço do Azure</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c3-monitor"><span class="t">Azure Monitor</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c3-la"><span class="t">Azure Log Analytics</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c3-alertas"><span class="t">Alertas e grupos de ações</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c3-ai"><span class="t">Application Insights</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c3-sintese"><span class="t">Síntese de observabilidade</span><span class="dots"></span><span class="p"></span></div>
+      </div>
+
+      <div class="toc-cap">
+        <div class="cap-head" data-goto="cap4"><span class="cap-n">Capítulo 4</span><span class="cap-t">Descrever recursos e ferramentas para gerenciar e implantar recursos do Azure</span><span class="cap-p"></span></div>
+        <div class="toc-item" data-goto="c4-ferr"><span class="t">Ferramentas e Copilot no Azure</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c4-portal"><span class="t">Portal do Azure</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c4-shell"><span class="t">Cloud Shell, PowerShell e CLI</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c4-arc"><span class="t">Azure Arc</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c4-arm"><span class="t">Azure Resource Manager (ARM)</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c4-iac"><span class="t">Infraestrutura como Código e modelos ARM</span><span class="dots"></span><span class="p"></span></div>
+        <div class="toc-item" data-goto="c4-bicep"><span class="t">Bicep e síntese do módulo</span><span class="dots"></span><span class="p"></span></div>
+        <div class="cap-head" data-goto="conclusao" style="margin-top:12px"><span class="cap-n">Final</span><span class="cap-t">Conclusão</span><span class="cap-p"></span></div>
+        <div class="cap-head" data-goto="refs" style="margin-top:12px"><span class="cap-n">Final</span><span class="cap-t">Referências bibliográficas</span><span class="cap-p"></span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CAPÍTULO 1 — GERENCIAMENTO DE CUSTOS
+     ====================================================== -->
+<section class="slide" id="cap1" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body abertura">
+    <div class="lado"><div class="rot">Capítulo</div><div class="num">1</div></div>
+    <div class="corpo">
+      <h2>Descrever o gerenciamento de custos no Azure</h2>
+      <p class="intro">Fatores que afetam os custos no Azure e ferramentas para prever custos potenciais, monitorá-los e controlá-los, além das opções de otimização para diferentes padrões de carga de trabalho.</p>
+      <h3>Objetivos de aprendizagem</h3>
+      <ul class="lista">
+        <li>Descrever os fatores que podem afetar os custos no Azure.</li>
+        <li>Descrever a calculadora de preços do Azure.</li>
+        <li>Descrever a ferramenta de Gerenciamento de Custos da Microsoft.</li>
+        <li>Descrever a finalidade das etiquetas (tags).</li>
+        <li>Descrever as opções de otimização de custo: Reservas, planos de economia e preços spot.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-fatores" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Fatores que afetam os custos</div>
+    <h2>Pagar pelo que se usa: o que move a fatura</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <p>No Azure, você paga pelos recursos de TI <strong>à medida que os usa</strong>, em vez de comprar e manter sua própria infraestrutura. Computação, armazenamento e rede são alugados e liberados quando não são mais necessários: os custos acompanham o <strong>uso real</strong>.</p>
+        <p class="sec">Seis fatores afetam quanto você paga:</p>
+        <div class="grid g2" style="gap:10px">
+          <div class="chip"><span class="n">1</span>Tipo de recurso</div>
+          <div class="chip"><span class="n">2</span>Consumo</div>
+          <div class="chip"><span class="n">3</span>Manutenção</div>
+          <div class="chip"><span class="n">4</span>Geografia</div>
+          <div class="chip"><span class="n">5</span>Tipo de assinatura</div>
+          <div class="chip"><span class="n">6</span>Azure Marketplace</div>
+        </div>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="1" data-n="1" src="./modulo 1 imagens/imagem 1.jpg" alt="Factors That Affect Azure Costs" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 1.</b> Fatores que afetam os custos no Azure (<i>Factors That Affect Azure Costs</i>)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-f12" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Fatores 1 e 2</div>
+    <h2>Tipo de recurso e consumo</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <h3>1 · Tipo de recurso</h3>
+        <p class="sec" style="font-size:21px">Tipo, configurações e região impactam o preço. O Azure rastreia quanto de cada recurso você usa.</p>
+        <div class="card">
+          <h4>Conta de armazenamento</h4>
+          <ul class="lista xs"><li>Tipo de dado (ex.: blobs para arquivos e imagens)</li><li>Velocidade de acesso e nº de cópias de backup</li><li>Mesma conta em regiões diferentes → custos diferentes</li></ul>
+        </div>
+        <div class="card">
+          <h4>Máquina virtual (VM)</h4>
+          <ul class="lista xs"><li>Licenciamento do SO ou de outro software</li><li>Processador e número de núcleos</li><li>Armazenamento anexado e adaptador de rede</li></ul>
+        </div>
+      </div>
+      <div class="col">
+        <h3>2 · Consumo</h3>
+        <div class="card branco"><h4>Pagamento conforme o uso (<i>pay-as-you-go</i>)</h4><p>Paga o que consome no ciclo de cobrança: máxima flexibilidade.</p></div>
+        <div class="card branco"><h4>Reservas</h4><p>Compromisso de 1 ou 3 anos com recursos específicos (VMs, bancos de dados, armazenamento) para reduzir o custo.</p></div>
+        <div class="card branco"><h4>Plano de economia para computação</h4><p>Compromisso com um valor de gasto <strong>por hora</strong> (1 ou 3 anos); o Azure aplica o melhor preço automaticamente.</p></div>
+        <div class="card branco"><h4>Preço spot</h4><p>Capacidade ociosa a preço menor, para cargas que toleram interrupções (podem ser desalojadas).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-precos" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Modelos de preços e descontos</div>
+    <h2>Quatro modelos, um equilíbrio: flexibilidade × economia</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <ul class="lista sm">
+          <li><strong>Pay-as-you-go:</strong> sem compromisso; ideal para uso variável ou imprevisível, a taxas padrão.</li>
+          <li><strong>Reservas:</strong> 1 ou 3 anos; cargas estáveis e previsíveis.</li>
+          <li><strong>Savings Plan:</strong> 1 ou 3 anos; computação estável com flexibilidade entre serviços.</li>
+          <li><strong>Spot:</strong> sem compromisso; cargas interrompíveis (ex.: processamento em lotes).</li>
+        </ul>
+        <div class="callout">Quanto <b>maior o compromisso</b>, maior a economia potencial; quanto <b>menor</b>, mais flexibilidade (eixo inferior da figura). Os percentuais “até X%” são os ilustrados na figura e variam conforme serviço, região e prazo.</div>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="1" data-n="2" src="./modulo 1 imagens/imagem 2.jpg" alt="Azure Pricing Options Compared" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 2.</b> Comparativo das opções de preço (<i>Azure Pricing Options Compared</i>)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-f36" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Fatores 3 a 6</div>
+    <h2>Manutenção, geografia, assinatura e Marketplace</h2>
+    <div class="grid g2 grow" style="grid-template-rows: 1fr 1fr">
+      <div class="card">
+        <h3>3 · Manutenção (recursos órfãos)</h3>
+        <p>Ao provisionar uma VM, também são criados armazenamento e rede. Se a VM for desprovisionada, esses recursos podem permanecer — e continuar gerando custo. <strong>Monitore e remova o que não é mais necessário.</strong></p>
+      </div>
+      <div class="card">
+        <h3>4 · Geografia e zonas de cobrança</h3>
+        <p>Energia, mão de obra, impostos e taxas variam por região. Mover dados dentro da Europa custa menos que da Europa para Ásia ou América do Sul. <strong>Zona de cobrança</strong> ≠ zona de disponibilidade: agrupa regiões para o preço de transferência (entrada, em geral, gratuita; saída cobrada).</p>
+      </div>
+      <div class="card">
+        <h3>5 · Tipo de assinatura</h3>
+        <p>Algumas assinaturas incluem subsídios de uso. A avaliação gratuita dá produtos gratuitos por <strong>12 meses</strong>, crédito nos <strong>primeiros 30 dias</strong> e mais de <strong>25 produtos sempre gratuitos</strong> (conforme disponibilidade e região).</p>
+      </div>
+      <div class="card">
+        <h3>6 · Azure Marketplace</h3>
+        <p>Soluções de terceiros baseadas no Azure: você paga os serviços do Azure <strong>e</strong> o fornecedor. A estrutura de cobrança é definida pelo fornecedor; as soluções são certificadas e seguem as políticas do Azure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-calc" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Calculadora de preços do Azure</div>
+    <h2>Estimar antes de implantar</h2>
+    <div class="cols c-4-6">
+      <div class="col">
+        <ul class="lista sm">
+          <li>Estima o custo de provisionar recursos: computação, armazenamento e rede.</li>
+          <li>Permite estimar um recurso individual, montar uma solução ou usar um cenário de exemplo.</li>
+          <li>Compara opções de armazenamento: tipo, camada de acesso e redundância.</li>
+          <li>A calculadora <strong>TCO foi desativada</strong>.</li>
+        </ul>
+        <div class="callout"><b>Atenção:</b> é apenas informativa. Nada é provisionado e nada é cobrado ao adicionar recursos.</div>
+      </div>
+      <div class="col">
+        <figure class="fig">
+          <div class="imgbox h-fixo" style="aspect-ratio:1248/514"><img class="fig-img" data-mod="1" data-n="3" src="./modulo 1 imagens/imagem 3.jpg" alt="Calculadora de preços do Azure" onerror="imgFallback(this)"></div>
+          <figcaption><b>Figura 3.</b> Calculadora de preços do Azure (<i>Azure Pricing Calculator</i>)</figcaption>
+        </figure>
+        <div class="card">
+          <h4>Exemplo prático</h4>
+          <p style="font-size:20px">Novo aplicativo web: modele o plano do Serviço de Aplicativo, o banco gerenciado e o armazenamento; compare estimativas mensais entre regiões, camadas e redundância. A estimativa vira <strong>linha de base</strong> para aprovação de orçamento e é revisitada quando a arquitetura muda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-cm" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Gerenciamento de Custos da Microsoft</div>
+    <h2>Analisar, monitorar e gerenciar os custos</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Recursos podem ser provisionados rapidamente — ou acidentalmente — e só serem notados na fatura. O Gerenciamento de Custos evita essa surpresa:</p>
+        <ul class="lista sm">
+          <li>verificar rapidamente os custos dos recursos;</li>
+          <li>criar <strong>alertas</strong> com base nos gastos;</li>
+          <li>criar <strong>orçamentos</strong> que automatizam o gerenciamento.</li>
+        </ul>
+        <h3 style="font-size:20px;margin-top:4px">Análise de custos</h3>
+        <ul class="lista xs">
+          <li>Visual rápido por ciclo de cobrança, região, recurso, assinatura, grupo de recursos ou serviço.</li>
+          <li>Custos acumulados ao longo do tempo vs. orçamento.</li>
+          <li>Tarefas comuns: detectar picos pós-implantação, achar recursos ociosos em ambientes não produtivos e validar tags e orçamentos.</li>
+        </ul>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="1" data-n="4" src="./modulo 1 imagens/imagem 4.jpg" alt="Azure Cost Management" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 4.</b> Análise de custos, alertas e orçamentos (<i>Azure Cost Management</i>)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-alertas" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Alertas de custo e orçamentos</div>
+    <h2>Três tipos de alerta e orçamentos com automação</h2>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Alertas de orçamento</h3>
+        <p style="font-size:20px">Avisam quando o gasto <strong>atinge ou excede</strong> um limite. Criados no portal (por custo) ou pela API de Consumo (também por uso). Geram e-mail aos destinatários.</p>
+        <p style="font-size:20px"><em>Ex.: alerta em 80% do orçamento mensal de dev/teste.</em></p>
+      </div>
+      <div class="card">
+        <h3>Alertas de crédito</h3>
+        <p style="font-size:20px">Avisam quando o <strong>pagamento antecipado do Azure</strong> (antes “compromisso monetário”) é consumido — para Contratos Enterprise (EA). Gerados a <strong>90% e 100%</strong> do saldo; e-mail aos proprietários da conta.</p>
+      </div>
+      <div class="card">
+        <h3>Cota de gastos do departamento</h3>
+        <p style="font-size:20px">Específicos de clientes EA: avisam quando o gasto do departamento atinge um limite fixo da cota, configurado no portal.</p>
+        <p style="font-size:20px"><em>Ex.: 50% ou 75% da cota.</em></p>
+      </div>
+    </div>
+    <div class="card branco" style="margin-top:14px;flex:1">
+      <h3>Orçamentos</h3>
+      <ul class="lista sm">
+        <li>Definem um <strong>limite de gastos</strong> por assinatura, grupo de recursos, tipo de serviço ou outros critérios; ao criar o orçamento, define-se também o alerta.</li>
+        <li>Ao atingir o nível de alerta, aparece em <em>alertas de custo</em> e (se configurado) segue por e-mail.</li>
+        <li>Podem disparar <strong>automação</strong> que suspende ou modifica recursos — ex.: desligar recursos de não produção ao atingir o limite.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-tags" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Finalidade das tags (etiquetas)</div>
+    <h2>Metadados que organizam e controlam custos</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Tags fornecem <strong>metadados</strong> sobre os recursos, úteis para:</p>
+        <ul class="lista xs">
+          <li><strong>Gerenciamento:</strong> localizar e agir por carga de trabalho, ambiente, equipe e responsável.</li>
+          <li><strong>Custos:</strong> relatar, alocar centros de custo, acompanhar orçamentos.</li>
+          <li><strong>Operações:</strong> agrupar por criticidade e formular SLAs.</li>
+          <li><strong>Segurança:</strong> classificar dados (público, confidencial).</li>
+          <li><strong>Governança e conformidade:</strong> ex.: ISO 27001; exigir proprietário ou departamento.</li>
+          <li><strong>Automação:</strong> visualizar recursos de implantações complexas (ex.: Azure DevOps).</li>
+        </ul>
+      </div>
+      <div class="col">
+        <figure class="fig grow">
+          <div class="imgbox"><img class="fig-img" data-mod="1" data-n="5" src="./modulo 1 imagens/imagem 5.jpg" alt="Resource Tag Use Cases" onerror="imgFallback(this)"></div>
+          <figcaption><b>Figura 5.</b> Casos de uso de tags (<i>Resource Tag Use Cases</i>)</figcaption>
+        </figure>
+        <div class="card" style="padding:8px 16px">
+          <h4>Gerenciamento via Azure Policy</h4>
+          <ul class="lista xs" style="margin:0"><li style="margin-bottom:2px">Exigir tags em novos recursos e reaplicar as removidas.</li><li style="margin-bottom:0">Recursos <strong>não herdam</strong> tags de assinatura ou grupo.</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-tags2" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Estrutura prática de tags</div>
+    <h2>Uma tag = nome + valor</h2>
+    <div class="cols c-6-5">
+      <div class="col">
+        <figure class="fig">
+          <div class="imgbox h-fixo" style="aspect-ratio:860/325"><img class="fig-img" data-mod="1" data-n="6" src="./modulo 1 imagens/imagem 6.jpg" alt="Exemplo de estrutura de marcação (nome e valor)" onerror="imgFallback(this)"></div>
+          <figcaption><b>Figura 6.</b> Exemplo de estrutura de tags (colunas <i>Name</i>/<i>Valor</i>)</figcaption>
+        </figure>
+        <p style="font-size:21px">Cada recurso pode ter <strong>uma ou mais tags</strong>. Não é preciso exigir uma tag em todos os recursos: por exemplo, só os críticos recebem a tag <code>Impacto</code> — os recursos sem ela não são considerados críticos.</p>
+      </div>
+      <div class="col">
+        <div class="card">
+          <h3>Conjunto inicial prático</h3>
+          <div class="chips-wrap" style="margin:6px 0 8px">
+            <span class="chip" style="padding:4px 14px">Environment</span>
+            <span class="chip" style="padding:4px 14px">Owner</span>
+            <span class="chip" style="padding:4px 14px">CostCenter</span>
+            <span class="chip" style="padding:4px 14px">Workload</span>
+          </div>
+          <p style="font-size:20px">Apoia tarefas do dia a dia: filtrar custos, localizar responsáveis pelos serviços e delimitar automação.</p>
+        </div>
+        <div class="card branco">
+          <h4>Como gerenciar</h4>
+          <p style="font-size:20px">Portal do Azure, PowerShell, CLI do Azure, modelos ARM ou API REST.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c1-guia" data-cap="Capítulo 1 · Gerenciamento de custos">
+  <div class="s-body">
+    <div class="kicker">Otimização de custos</div>
+    <h2>Guia de decisão: Reservas, Savings Plan ou Spot</h2>
+    <div class="grid g3">
+      <div class="card">
+        <span class="tag">Reservas</span>
+        <h4>Escolha quando…</h4>
+        <p style="font-size:20px">a carga é previsível, de longa execução e com necessidades estáveis.</p>
+        <p style="font-size:20px"><em>Ex.: SQL de produção 24×7.</em></p>
+      </div>
+      <div class="card">
+        <span class="tag">Savings Plan</span>
+        <h4>Escolha quando…</h4>
+        <p style="font-size:20px">o uso é estável, mas você precisa de flexibilidade entre serviços de computação.</p>
+        <p style="font-size:20px"><em>Ex.: Web/API mista que muda entre serviços.</em></p>
+      </div>
+      <div class="card">
+        <span class="tag">Spot</span>
+        <h4>Escolha quando…</h4>
+        <p style="font-size:20px">a carga tolera falhas ou interrupções e o menor custo é a prioridade.</p>
+        <p style="font-size:20px"><em>Ex.: renderização em lote ou testes reiniciáveis.</em></p>
+      </div>
+    </div>
+    <div class="card branco" style="margin-top:14px">
+      <h3>Reavalie regularmente</h3>
+      <ul class="lista sm">
+        <li>Uma carga que começa interruptível pode se tornar crítica e migrar do <strong>Spot</strong> para um modelo mais previsível.</li>
+        <li>Uma carga que se estabiliza pode sair do <strong>sob demanda</strong> para um modelo de compromisso, com melhor eficiência de custo.</li>
+      </ul>
+    </div>
+    <div class="callout" style="margin-top:12px"><b>Revisão rápida:</b> a ferramenta que estima o custo antes da implantação é a <strong>Calculadora de preços</strong>; para cargas que toleram interrupção, o menor custo vem das <strong>VMs Spot</strong>; metadados de organização são as <strong>tags</strong>.</div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CAPÍTULO 2 — GOVERNANÇA E CONFORMIDADE
+     ====================================================== -->
+<section class="slide" id="cap2" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body abertura">
+    <div class="lado"><div class="rot">Capítulo</div><div class="num">2</div></div>
+    <div class="corpo">
+      <h2>Descrever os recursos e as ferramentas de governança e conformidade no Azure</h2>
+      <p class="intro">Recursos e ferramentas para governar o ambiente do Azure e manter os recursos em conformidade com requisitos internos ou regulatórios.</p>
+      <h3>Objetivos de aprendizagem</h3>
+      <ul class="lista">
+        <li>Descrever a finalidade do Microsoft Purview.</li>
+        <li>Descrever a finalidade do Azure Policy.</li>
+        <li>Descrever a finalidade dos bloqueios de recursos.</li>
+        <li>Descrever a finalidade do Portal de Confiança do Serviço.</li>
+        <li>Explicar os guardrails de governança para fluxos administrativos assistidos por IA.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-purview" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Microsoft Purview</div>
+    <h2>Visão unificada dos dados: descoberta, classificação e linhagem</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Família de soluções de <strong>governança, risco e conformidade de dados</strong> que oferece uma única exibição unificada, coletando informações de dados <strong>locais, multinuvem e SaaS</strong>.</p>
+        <p class="sec" style="font-size:21px">Mantém você atualizado sobre o cenário de dados com:</p>
+        <ul class="lista sm">
+          <li><strong>Descoberta</strong> de dados automatizada;</li>
+          <li><strong>Classificação</strong> de dados confidenciais;</li>
+          <li><strong>Linhagem</strong> de dados de ponta a ponta.</li>
+        </ul>
+        <div class="callout">Duas áreas de solução: <strong>risco e conformidade</strong> e <strong>governança unificada de dados</strong>.</div>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="2" data-n="1" src="./modulo 2 imagens/imagem 1.jpg" alt="Microsoft Purview" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 1.</b> Microsoft Purview: dados brutos → dados governados</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-purview2" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Microsoft Purview</div>
+    <h2>Risco e conformidade × governança de dados unificada</h2>
+    <div class="cols c-1-1">
+      <div class="card" style="padding:14px 20px">
+        <span class="tag">Microsoft 365</span>
+        <h3>Soluções de risco e conformidade</h3>
+        <p style="font-size:20px;margin-bottom:6px">Recursos do Microsoft 365 são o componente central (Teams, OneDrive, Exchange…). Ajudam a equipe a:</p>
+        <ul class="lista sm">
+          <li>proteger dados confidenciais entre nuvens, aplicativos e dispositivos;</li>
+          <li>identificar riscos de dados e gerenciar requisitos de conformidade regulatória;</li>
+          <li>dar os primeiros passos na conformidade regulatória.</li>
+        </ul>
+      </div>
+      <div class="card" style="padding:14px 20px">
+        <span class="tag">Locais · Multinuvem · SaaS</span>
+        <h3>Governança de dados unificada</h3>
+        <p style="font-size:20px;margin-bottom:6px">Gerencia dados em bancos Azure, SQL e Hive, locais e até em outras nuvens, como o <strong>Amazon S3</strong>. Ajuda a:</p>
+        <ul class="lista xs">
+          <li>mapear o patrimônio de dados, com classificação e linhagem;</li>
+          <li>identificar onde estão os dados confidenciais;</li>
+          <li>criar ambiente seguro para encontrar dados valiosos;</li>
+          <li>gerar insights sobre armazenamento e uso;</li>
+          <li>gerenciar o acesso aos dados com segurança e em escala.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-policy" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Azure Policy</div>
+    <h2>Finalidade, definições e herança de escopo</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:20px">O <strong>Azure Policy</strong> cria, atribui e gerencia políticas que <strong>controlam ou auditam</strong> recursos, impondo regras às configurações.</p>
+        <h3 style="font-size:21px;margin:2px 0 4px">Definições</h3>
+        <ul class="lista xs">
+          <li>Políticas individuais e grupos de políticas (<strong>iniciativas</strong>).</li>
+          <li>Avalia, realça os não conformes e pode <strong>impedir</strong> a criação deles.</li>
+          <li>Internas: Armazenamento, Rede, Computação, Central de Segurança e Monitoramento.</li>
+        </ul>
+        <h3 style="font-size:21px;margin:2px 0 4px">Escopo e herança</h3>
+        <p style="font-size:18px">Definida em recurso, grupo de recursos, assinatura etc.; política de nível superior vale para tudo abaixo. <em>Ex.: política em um grupo de recursos vale para todos os recursos nele criados.</em></p>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="2" data-n="2" src="./modulo 2 imagens/imagem 2.jpg" alt="Azure Policy" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 2.</b> Azure Policy: definição, escopo herdado e avaliação</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-policy2" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Azure Policy</div>
+    <h2>Remediação, Azure DevOps e guardrails para IA</h2>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Política em ação</h3>
+        <p style="font-size:20px">Se a política permite só <strong>um tamanho de VM</strong>, ela é invocada ao criar e ao redimensionar VMs — e também avalia as VMs já existentes.</p>
+      </div>
+      <div class="card">
+        <h3>Remediação automática</h3>
+        <p style="font-size:20px">Pode corrigir recursos não compatíveis. <em>Ex.: exige a tag <code>AppName</code> e a adiciona quando ausente.</em> Você mantém o controle: recursos podem ser marcados como <strong>exceções</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Integração com Azure DevOps</h3>
+        <p style="font-size:20px">Aplica políticas de integração e entrega contínuas nas fases de <strong>pré e pós-implantação</strong> dos aplicativos.</p>
+      </div>
+    </div>
+    <div class="card vermelho" style="margin-top:16px;flex:1;background:#fff;border-color:var(--borda);border-left-color:var(--vermelho)">
+      <span class="tag">IA</span>
+      <h3>Guardrails de política para alterações assistidas por IA</h3>
+      <p style="font-size:21px">Mesmo com recomendações do Copilot ou automação semelhante a agente, o Azure Policy <strong>continua impondo seus padrões</strong>, independentemente de como a alteração foi proposta:</p>
+      <div class="chips-wrap" style="margin:8px 0">
+        <span class="chip">Locais permitidos</span><span class="chip">Tags obrigatórias</span><span class="chip">SKUs aprovados</span><span class="chip">Baseline de segurança</span>
+      </div>
+      <p style="font-size:20px" class="sec">As equipes ganham velocidade com IA e mantêm as alterações em conformidade com requisitos organizacionais e regulatórios.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-iniciativas" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Iniciativas do Azure Policy</div>
+    <h2>Agrupar políticas para atingir uma meta maior</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <p style="font-size:21px">Uma <strong>iniciativa</strong> agrupa políticas relacionadas. A definição contém todas as definições de política necessárias para acompanhar o <strong>estado de conformidade</strong> de uma meta.</p>
+        <div class="card">
+          <h3>Estudo de caso</h3>
+          <p style="font-size:20px">A iniciativa <strong>Habilitar o Monitoramento na Central de Segurança do Azure</strong> monitora todas as recomendações de segurança disponíveis para todos os tipos de recursos do Azure.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="iniciativa">
+          <div class="ini-t">Iniciativa: Habilitar o Monitoramento na Central de Segurança</div>
+          <div class="pols">
+            <div class="pol"><b>Política</b>Monitorar banco SQL não criptografado</div>
+            <div class="pol"><b>Política</b>Monitorar vulnerabilidades de SO</div>
+            <div class="pol"><b>Política</b>Monitorar ausência de proteção de ponto de extremidade</div>
+          </div>
+          <div class="mais">+ mais de 100 definições de política separadas</div>
+        </div>
+        <ul class="lista xs">
+          <li><strong>SQL:</strong> servidores e bancos não criptografados.</li>
+          <li><strong>SO:</strong> servidores fora da linha de base de vulnerabilidades configurada.</li>
+          <li><strong>Endpoint:</strong> servidores sem agente de proteção instalado.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-locks" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Bloqueios de recursos (Resource Locks)</div>
+    <h2>Tipos de bloqueio e herança</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Impede que recursos sejam <strong>excluídos ou alterados acidentalmente</strong> — mesmo com RBAC, quem tem o acesso certo ainda pode apagar recursos críticos.</p>
+        <ul class="lista xs">
+          <li>Aplica-se a recurso, grupo de recursos ou <strong>assinatura inteira</strong>.</li>
+          <li><strong>Herdado:</strong> bloqueio em um grupo vale para todos os recursos dele.</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>Tipo</th><th>Ler</th><th>Modificar</th><th>Excluir</th></tr>
+          <tr><td>Delete</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✕</td></tr>
+          <tr><td>ReadOnly</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td></tr>
+        </table>
+        <p style="font-size:20px" class="sec"><b>ReadOnly</b> equivale a restringir os usuários autorizados às permissões da função <em>Leitor</em>.</p>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="2" data-n="3" src="./modulo 2 imagens/imagem 3.png" alt="Resource Locks: Types and Inheritance" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 3.</b> Bloqueios de recursos: tipos e herança (<i>Resource Locks</i>)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-locks2" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Bloqueios de recursos</div>
+    <h2>Gerenciar e modificar recursos bloqueados</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <h3 style="font-size:20px">Como gerenciar</h3>
+        <p style="font-size:21px">Portal do Azure, PowerShell, CLI do Azure ou modelo ARM. No portal: seção <strong>Bloqueios</strong> no painel <em>Configurações</em> de qualquer recurso.</p>
+        <h3 style="font-size:20px">Para alterar ou excluir: 2 etapas</h3>
+        <div class="stack-step"><div class="n">1</div><div class="tx"><b>Remover o bloqueio.</b></div></div>
+        <div class="stack-step"><div class="n">2</div><div class="tx"><b>Executar a ação</b> para a qual você tem permissão.</div></div>
+        <div class="callout">Os bloqueios valem <b>independentemente do RBAC</b>: mesmo o proprietário do recurso precisa remover o bloqueio antes da ação bloqueada.</div>
+      </div>
+      <figure class="fig">
+        <div class="imgbox h-fixo" style="aspect-ratio:952/429"><img class="fig-img" data-mod="2" data-n="4" src="./modulo 2 imagens/imagem 4.png" alt="Portal do Azure – Bloqueios" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 4.</b> Portal do Azure: a opção <i>Locks</i> (Bloqueios) em Configurações</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-stp" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Portal de Confiança do Serviço (Service Trust Portal)</div>
+    <h2>Acesso, NDA e padrões de conformidade</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Reúne conteúdos, ferramentas e recursos sobre as práticas de <strong>segurança, privacidade e conformidade</strong> da Microsoft, incluindo controles e processos que protegem os serviços de nuvem e os dados do cliente.</p>
+        <h3 style="font-size:20px">Acesso</h3>
+        <ul class="lista xs">
+          <li>Endereço: <code>servicetrust.microsoft.com</code></li>
+          <li>Entrar com conta corporativa ou de estudante (<strong>Microsoft Entra</strong>).</li>
+          <li>Aceitar o <strong>contrato de confidencialidade (NDA)</strong> sobre os materiais de conformidade.</li>
+        </ul>
+        <p style="font-size:20px" class="sec">Padrões e certificações: ISO/IEC, SOC, GDPR, FedRAMP, PCI, CSA STAR, IRAP, MTCS, ENS…</p>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="2" data-n="5" src="./modulo 2 imagens/imagem 5.jpg" alt="Service Trust Portal" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 5.</b> Service Trust Portal: certificações, regulamentos e padrões</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c2-stp2" data-cap="Capítulo 2 · Governança e conformidade">
+  <div class="s-body">
+    <div class="kicker">Portal de Confiança do Serviço</div>
+    <h2>Recursos do portal e governança em fluxos com IA</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <h3>Menu principal</h3>
+        <div class="card branco"><h4>Portal de Confiança do Serviço</h4><p style="font-size:20px">Hiperlink de acesso rápido à página inicial.</p></div>
+        <div class="card branco"><h4>Minha Biblioteca</h4><p style="font-size:20px">Salve (fixe) documentos para acesso rápido e receba notificações quando forem atualizados.</p></div>
+        <div class="card branco"><h4>Todos os Documentos</h4><p style="font-size:20px">Ponto único de acesso aos documentos; fixe-os para que apareçam em Minha Biblioteca.</p></div>
+        <div class="callout" style="font-size:20px"><b>Obs.:</b> relatórios ficam disponíveis por pelo menos <strong>12 meses</strong> após a publicação ou até haver nova versão.</div>
+      </div>
+      <div class="col">
+        <h3>Governança com copilot e agentes</h3>
+        <p style="font-size:21px">Quando as equipes usam fluxos assistidos por copilot ou agente, os controles de governança <strong>continuam valendo</strong>:</p>
+        <div class="chips-wrap">
+          <span class="chip">RBAC</span><span class="chip">Azure Policy</span><span class="chip">Bloqueios</span><span class="chip">Auditoria</span>
+        </div>
+        <p style="font-size:21px">Eles mantêm as alterações assistidas por IA <strong>dentro dos limites aprovados</strong>.</p>
+        <div class="card">
+          <h4>Resumo do capítulo</h4>
+          <ul class="lista xs"><li><strong>Purview:</strong> governa e protege dados.</li><li><strong>Policy:</strong> impõe e audita padrões.</li><li><strong>Locks:</strong> evitam exclusões acidentais.</li><li><strong>Service Trust:</strong> evidências de conformidade.</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CAPÍTULO 3 — MONITORAMENTO
+     ====================================================== -->
+<section class="slide" id="cap3" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body abertura">
+    <div class="lado"><div class="rot">Capítulo</div><div class="num">3</div></div>
+    <div class="corpo">
+      <h2>Descrever as ferramentas de monitoramento no Azure</h2>
+      <p class="intro">Ferramentas que ajudam a monitorar ambientes e aplicativos, tanto no Azure quanto em ambientes locais ou multinuvem.</p>
+      <h3>Objetivos de aprendizagem</h3>
+      <ul class="lista">
+        <li>Descrever a finalidade do Assistente do Azure (Azure Advisor).</li>
+        <li>Descrever a Integridade do Serviço do Azure (Azure Service Health).</li>
+        <li>Descrever o Azure Monitor, incluindo o Log Analytics, os alertas do Azure Monitor e o Application Insights.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-advisor" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Assistente do Azure (Azure Advisor)</div>
+    <h2>Um guia de boas práticas dentro do portal</h2>
+    <p style="font-size:20px;margin-bottom:12px">O Advisor <strong>avalia seus recursos</strong> e faz recomendações para melhorar confiabilidade, segurança, desempenho e eficiência de custos. Cada recomendação inclui uma <strong>ação sugerida</strong>:</p>
+    <div class="flow" style="margin-bottom:16px">
+      <div class="passo"><b>1 · Recomendação</b>O Advisor analisa as assinaturas e sinaliza oportunidades.</div>
+      <div class="seta">→</div>
+      <div class="passo"><b>2 · Decisão</b>Você escolhe o que fazer com cada item.</div>
+      <div class="seta">→</div>
+      <div class="passo" style="border-top-color:var(--vermelho)"><b>3 · Aplicar · Adiar · Ignorar</b>Tome a ação já, deixe para depois ou descarte.</div>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h3>Painel</h3>
+        <p style="font-size:20px">Exibe recomendações de <strong>todas as assinaturas</strong>; é possível filtrar por assinatura, grupo de recursos ou serviço.</p>
+      </div>
+      <div class="card">
+        <h3>Notificações</h3>
+        <p style="font-size:20px">Configure notificações para que o Advisor avise quando <strong>novas recomendações</strong> aparecerem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-advisor2" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Assistente do Azure (Azure Advisor)</div>
+    <h2>As 5 categorias de recomendação</h2>
+    <div class="cols c-5-6">
+      <div class="col" style="gap:7px">
+        <div class="card" style="padding:7px 16px"><h4 style="margin:0">Confiabilidade</h4><p style="font-size:20px">Mantém os aplicativos em execução, sinalizando riscos de configuração.</p></div>
+        <div class="card" style="padding:7px 16px"><h4 style="margin:0">Segurança</h4><p style="font-size:20px">Detecta ameaças e vulnerabilidades que podem levar a violações.</p></div>
+        <div class="card" style="padding:7px 16px"><h4 style="margin:0">Desempenho</h4><p style="font-size:20px">Identifica alterações que podem acelerar os aplicativos.</p></div>
+        <div class="card" style="padding:7px 16px"><h4 style="margin:0">Excelência Operacional</h4><p style="font-size:20px">Sugere melhorias de fluxo de trabalho e implantação.</p></div>
+        <div class="card" style="padding:7px 16px"><h4 style="margin:0">Custo</h4><p style="font-size:20px">Encontra formas de reduzir os gastos com o Azure.</p></div>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="3" data-n="1" src="./modulo 3 imagens/imagem 1.jpg" alt="Painel do Azure Advisor" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 1.</b> Painel do Azure Advisor com as cinco categorias</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-health" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Integridade do Serviço do Azure (Azure Service Health)</div>
+    <h2>Reduzindo o escopo: do global ao recurso</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Ajuda a se manter informado sobre a integridade do <strong>próprio Azure</strong> e dos <strong>recursos específicos</strong> que você executa. Combina três visões que vão do global ao individual.</p>
+        <ul class="lista xs">
+          <li>Usadas em conjunto, dão uma visão completa: de eventos gerais de serviço até um único recurso.</li>
+          <li>Alertas <strong>históricos</strong> são mantidos para detectar tendências recorrentes.</li>
+          <li>Você pode configurar alertas para ser notificado automaticamente.</li>
+        </ul>
+        <div class="callout">Quando um evento afeta uma carga de trabalho, o Service Health fornece <strong>links para suporte</strong> para resposta rápida.</div>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="3" data-n="2" src="./modulo 3 imagens/imagem 2.jpg" alt="Azure Service Health — Narrowing the Scope" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 2.</b> Azure Service Health — reduzindo o escopo (<i>Narrowing the Scope</i>)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-health2" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Integridade do Serviço do Azure</div>
+    <h2>As três visões de saúde e o valor operacional</h2>
+    <div class="grid g3">
+      <div class="card">
+        <span class="tag">Global</span>
+        <h3>Azure Status</h3>
+        <p style="font-size:20px">Visão global da integridade do Azure, em <strong>todos os serviços e regiões</strong>. Consulte ao ouvir sobre uma interrupção generalizada.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Seu ambiente</span>
+        <h3>Service Health</h3>
+        <p style="font-size:20px">Foca nos serviços e regiões que <strong>você realmente usa</strong>: interrupções, manutenção planejada e avisos de saúde relevantes. Permite alertas.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Individual</span>
+        <h3>Resource Health</h3>
+        <p style="font-size:20px">Mostra um recurso específico (ex.: uma VM): se está normal ou com problema — e se a causa está <strong>no Azure ou no seu sistema</strong>.</p>
+      </div>
+    </div>
+    <div class="flow" style="margin:16px 0 14px">
+      <div class="passo"><b>Azure Status</b>Todos os serviços, todas as regiões</div>
+      <div class="seta">→</div>
+      <div class="passo"><b>Service Health</b>Seus serviços, suas regiões</div>
+      <div class="seta">→</div>
+      <div class="passo"><b>Resource Health</b>Um recurso individual</div>
+    </div>
+    <div class="callout"><b>Valor operacional:</b> diante de um evento que afeta uma carga de trabalho, os links para suporte permitem <strong>responder rapidamente</strong>.</div>
+  </div>
+</section>
+
+<section class="slide" id="c3-monitor" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Azure Monitor</div>
+    <h2>Plataforma centralizada de observabilidade</h2>
+    <div class="cols c-4-6">
+      <div class="col">
+        <p style="font-size:21px">Plataforma para <strong>coletar, analisar e agir</strong> sobre dados de recursos e aplicativos — no Azure, localmente e em multinuvem.</p>
+        <ul class="lista sm">
+          <li><strong>Coleta</strong> logs e métricas de aplicativos, sistemas operacionais e camadas de rede.</li>
+          <li><strong>Armazena</strong> os dados centralmente.</li>
+          <li><strong>Disponibiliza</strong> por painéis, consultas e alertas.</li>
+        </ul>
+        <p style="font-size:20px" class="sec">Na figura: fontes → plataforma de dados (métricas, logs, traces) → experiências, visualização, análise, resposta e integração.</p>
+      </div>
+      <figure class="fig grow">
+        <div class="imgbox"><img class="fig-img" data-mod="3" data-n="3" src="./modulo 3 imagens/imagem 3.jpg" alt="Diagrama do Azure Monitor" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 3.</b> Amplitude do Azure Monitor</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-la" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Azure Log Analytics</div>
+    <h2>Coleta, filtragem e consultas avançadas</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <p style="font-size:21px">Ferramenta do portal onde você <strong>grava e executa consultas</strong> nos dados coletados pelo Azure Monitor (logs e métricas).</p>
+        <div class="card"><h4>Filtragem simples</h4><p style="font-size:20px">Ex.: localizar todos os erros na última hora.</p></div>
+        <div class="card"><h4>Análise avançada</h4><p style="font-size:20px">Visualizar tendências ao longo do tempo e correlacionar dados de vários recursos.</p></div>
+      </div>
+      <div class="col">
+        <pre class="codigo"><span class="rot-c">Exemplo ilustrativo (linguagem de consulta Kusto — KQL)</span><span class="c">// erros do Azure na última hora, por grupo de recursos</span>
+<span class="k">AzureActivity</span>
+| <span class="k">where</span> TimeGenerated &gt; ago(1h)
+| <span class="k">where</span> Level == "Error"
+| <span class="k">summarize</span> erros = count() <span class="k">by</span> ResourceGroup
+| <span class="k">order by</span> erros desc</pre>
+        <div class="callout" style="font-size:20px">Os resultados podem ser exibidos como tabela ou gráfico e servir de base para <strong>alertas</strong> e painéis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-alertas" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Alertas do Azure Monitor</div>
+    <h2>Regras de alerta e grupos de ações</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Notificam quando uma <strong>condição definida</strong> é atendida. A <strong>regra de alerta</strong> define a condição; o <strong>grupo de ações</strong> define quem é notificado e o que acontece a seguir.</p>
+        <ul class="lista xs">
+          <li><strong>Métricas:</strong> ex.: e-mail quando a CPU da VM fica acima de 80%.</li>
+          <li><strong>Logs:</strong> ex.: padrão de erro específico em vários recursos.</li>
+          <li>Grupos de ações são <strong>reutilizáveis</strong> no Azure Monitor, no Service Health e no Advisor.</li>
+        </ul>
+        <div class="sev">
+          <div><b>Sev 0</b>Crítico</div><div><b>Sev 1</b>Erro</div><div><b>Sev 2</b>Aviso</div><div><b>Sev 3</b>Info</div><div><b>Sev 4</b>Detalhado</div>
+        </div>
+      </div>
+      <figure class="fig">
+        <div class="imgbox h-fixo" style="aspect-ratio:1031/460"><img class="fig-img" data-mod="3" data-n="4" src="./modulo 3 imagens/imagem 4.jpg" alt="Painel de alertas e Smart Groups" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 4.</b> Painel de alertas por severidade (Sev 0–4) e <i>Smart Groups</i>, que agrupam alertas relacionados e reduzem o ruído</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-ai" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Application Insights</div>
+    <h2>Desempenho e uso de aplicações web</h2>
+    <p style="font-size:21px;margin-bottom:12px">Recurso do Azure Monitor que monitora o desempenho e o uso de aplicativos web — no Azure, localmente ou em outra nuvem.</p>
+    <div class="grid g2">
+      <div class="card branco">
+        <h3>Como habilitar</h3>
+        <ul class="lista xs">
+          <li><strong>SDK:</strong> adicionado ao código do aplicativo.</li>
+          <li><strong>Agente:</strong> habilitado <strong>sem alterações de código</strong>.</li>
+        </ul>
+        <h3 style="margin-top:8px">Testes de disponibilidade</h3>
+        <p style="font-size:20px">Enviam <strong>solicitações sintéticas</strong> ao aplicativo para confirmar que ele responde, mesmo em períodos de baixo tráfego.</p>
+      </div>
+      <div class="card">
+        <h3>O que ele monitora</h3>
+        <ul class="lista xs">
+          <li>Taxas de solicitação, tempos de resposta e taxas de falha.</li>
+          <li>Chamadas de <strong>dependência</strong> e seu desempenho.</li>
+          <li>Tempos de carregamento de página, contagem de usuários e tendências de sessão.</li>
+          <li>Contadores do servidor: CPU, memória e uso de rede.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c3-sintese" data-cap="Capítulo 3 · Monitoramento">
+  <div class="s-body">
+    <div class="kicker">Síntese de observabilidade no Azure</div>
+    <h2>Qual ferramenta responde a qual pergunta?</h2>
+    <table class="tbl">
+      <tr><th style="width:30%">Ferramenta</th><th>Pergunta que responde</th></tr>
+      <tr><td>Azure Advisor</td><td>O que posso melhorar em confiabilidade, segurança, desempenho, operações e custo?</td></tr>
+      <tr><td>Service Health</td><td>O Azure está com algum problema que afeta meus serviços e recursos?</td></tr>
+      <tr><td>Azure Monitor</td><td>O que está acontecendo nos meus recursos e aplicativos?</td></tr>
+      <tr><td>Log Analytics</td><td>O que os logs e métricas mostram? (consultas)</td></tr>
+      <tr><td>Alertas</td><td>Como sou avisado quando uma condição ocorre?</td></tr>
+      <tr><td>Application Insights</td><td>Como está o desempenho do meu aplicativo web?</td></tr>
+    </table>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="callout"><b>Revisão 1:</b> qual <em>não</em> é categoria do Advisor? <strong>Capacidade</strong> (as categorias são Confiabilidade, Segurança, Desempenho, Excelência Operacional e Custo).</div>
+      <div class="callout"><b>Revisão 2:</b> após um aviso de interrupção regional, o componente que mostra se <em>sua</em> VM foi afetada é o <strong>Resource Health</strong>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CAPÍTULO 4 — GERENCIAR E IMPLANTAR RECURSOS
+     ====================================================== -->
+<section class="slide" id="cap4" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body abertura">
+    <div class="lado"><div class="rot">Capítulo</div><div class="num">4</div></div>
+    <div class="corpo">
+      <h2>Descrever recursos e ferramentas para gerenciar e implantar recursos do Azure</h2>
+      <p class="intro">O portal do Azure, a linha de comando e as ferramentas de script para implantar e configurar recursos, e os serviços que gerenciam ambientes locais e multinuvem.</p>
+      <h3>Objetivos de aprendizagem</h3>
+      <ul class="lista">
+        <li>Descrever o portal do Azure.</li>
+        <li>Descrever o Azure Cloud Shell, incluindo a CLI do Azure e o Azure PowerShell.</li>
+        <li>Descrever a finalidade do Azure Arc.</li>
+        <li>Descrever o ARM, os modelos ARM e o Bicep.</li>
+        <li>Descrever como o Copilot no Azure ajuda nas operações, com humanos responsáveis pela validação.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-ferr" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Ferramentas para interagir com o Azure</div>
+    <h2>Portal, linha de comando e Copilot no Azure</h2>
+    <div class="cols c-1-1" style="flex:0 0 auto">
+      <div class="col">
+        <p style="font-size:21px">Para gerenciar grupos de gerenciamento, assinaturas, grupos de recursos e recursos, o Azure oferece:</p>
+        <ul class="lista sm">
+          <li><strong>Portal do Azure</strong> (interface gráfica);</li>
+          <li><strong>Azure PowerShell</strong>;</li>
+          <li><strong>CLI do Azure</strong>.</li>
+        </ul>
+      </div>
+      <figure class="fig">
+        <div class="imgbox h-fixo" style="aspect-ratio:1600/560"><img class="fig-img" data-mod="4" data-n="1" src="./modulo 4 imagens/imagem 1.png" alt="Azure Management Tools" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 1.</b> Ferramentas de gerenciamento do Azure (<i>Azure Management Tools</i>)</figcaption>
+      </figure>
+    </div>
+    <div class="card" style="margin-top:12px;flex:1">
+      <span class="tag">IA</span>
+      <h3>Operações assistidas por IA com Copilot no Azure</h3>
+      <p style="font-size:20px">Assistente de IA que dá orientação contextual em linguagem natural — explorar serviços, entender opções de configuração e elaborar comandos ou scripts; alguns fluxos coordenam tarefas de várias etapas (estilo agente). <strong>Trate-o como assistente operacional:</strong> valide recomendações, confirme permissões e revise as alterações antes de aplicar em produção.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-portal" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Portal do Azure</div>
+    <h2>Console gráfico unificado, personalizável e resiliente</h2>
+    <p style="font-size:21px;margin-bottom:12px">Console unificado <strong>baseado na web</strong>, alternativa às ferramentas de linha de comando: você gerencia a assinatura por uma interface gráfica.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Criar, gerenciar e monitorar</h3><p style="font-size:20px">Desde aplicativos web simples até implantações de nuvem complexas.</p></div>
+      <div class="card"><h3>Dashboards personalizados</h3><p style="font-size:20px">Uma exibição organizada dos recursos que importam para você.</p></div>
+      <div class="card"><h3>Acessibilidade</h3><p style="font-size:20px">Opções configuráveis para uma experiência ideal de uso.</p></div>
+    </div>
+    <div class="card branco" style="margin-top:14px;flex:1">
+      <h3>Resiliência e disponibilidade global</h3>
+      <ul class="lista sm">
+        <li>Mantém presença em <strong>todos os datacenters do Azure</strong>.</li>
+        <li>Resiliente a falhas individuais de datacenter.</li>
+        <li>Evita lentidão de rede por estar <strong>próximo dos usuários</strong>.</li>
+        <li>Atualizado continuamente, <strong>sem tempo de inatividade</strong> para manutenção.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-shell" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Azure Cloud Shell</div>
+    <h2>Terminal autenticado, direto no navegador</h2>
+    <div class="cols c-4-6">
+      <div class="col">
+        <p style="font-size:21px">Shell baseado em navegador para <strong>criar, configurar e gerenciar</strong> recursos do Azure. Aceita <strong>Azure PowerShell</strong> e <strong>CLI do Azure</strong> (Bash).</p>
+        <p style="font-size:21px">Abra-o pelo <strong>ícone do Cloud Shell</strong> no portal (destacado na figura).</p>
+        <ul class="lista xs">
+          <li>Sem <strong>instalação ou configuração local</strong>.</li>
+          <li><strong>Autenticado</strong> com suas credenciais: já sabe quem você é e suas permissões.</li>
+          <li>Você escolhe o shell que conhece melhor.</li>
+        </ul>
+      </div>
+      <figure class="fig">
+        <div class="imgbox h-fixo" style="aspect-ratio:1227/518"><img class="fig-img" data-mod="4" data-n="2" src="./modulo 4 imagens/imagem 2.jpg" alt="Portal do Azure com o ícone do Cloud Shell" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 2.</b> Portal do Azure com o ícone do Cloud Shell em destaque</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-ps" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Azure PowerShell × CLI do Azure</div>
+    <h2>Automação, scripts e multiplataforma</h2>
+    <table class="tbl">
+      <tr><th style="width:24%">Aspecto</th><th style="width:38%">Azure PowerShell</th><th>CLI do Azure</th></tr>
+      <tr><td>Sintaxe</td><td>Comandos <strong>cmdlets</strong> (PowerShell)</td><td>Comandos <strong>Bash</strong></td></tr>
+      <tr><td>Funcionamento</td><td>Cmdlets chamam a <strong>API REST do Azure</strong></td><td>Funcionalmente equivalente</td></tr>
+      <tr><td>Plataformas</td><td colspan="2">Windows, Linux e Mac, além do Azure Cloud Shell</td></tr>
+      <tr><td>Exemplo*</td><td><code>New-AzResourceGroup -Name rg-demo -Location brazilsouth</code></td><td><code>az group create --name rg-demo --location brazilsouth</code></td></tr>
+    </table>
+    <p style="font-size:16px;color:var(--texto-2);margin-top:4px">* Exemplo ilustrativo de criação de um grupo de recursos.</p>
+    <div class="grid g2" style="margin-top:10px">
+      <div class="card">
+        <h3>O que se automatiza</h3>
+        <ul class="lista xs"><li>Configuração, desmontagem e manutenção de recursos.</li><li>Implantar infraestrutura inteira (dezenas ou centenas de recursos) a partir de código imperativo.</li></ul>
+      </div>
+      <div class="card">
+        <h3>Scripts repetíveis</h3>
+        <p style="font-size:20px">Capturar os comandos em um <strong>script</strong> torna o processo repetível e automatizado. A escolha depende da <strong>linguagem que você já conhece</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-arc" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Azure Arc</div>
+    <h2>Governança e gerenciamento híbrido e multinuvem</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Estende a <strong>conformidade e o monitoramento</strong> do Azure a ambientes híbridos e multinuvem, trabalhando com o Azure Resource Manager.</p>
+        <ul class="lista xs">
+          <li>Projeta recursos <strong>não Azure</strong> no ARM e gerencia tudo em conjunto.</li>
+          <li>Gerencia VMs, clusters Kubernetes e bancos de dados híbridos/multinuvem <strong>como se estivessem no Azure</strong>.</li>
+          <li>Usa os serviços e recursos de gerenciamento familiares do Azure.</li>
+          <li>Mantém ITOps tradicional e introduz práticas de <strong>DevOps</strong>.</li>
+          <li>Localizações personalizadas como camada de abstração em Kubernetes habilitado para Arc.</li>
+        </ul>
+      </div>
+      <figure class="fig">
+        <div class="imgbox h-fixo" style="aspect-ratio:1600/680"><img class="fig-img" data-mod="4" data-n="3" src="./modulo 4 imagens/imagem 3.png" alt="Azure Arc Unified Management Across Environments" onerror="imgFallback(this)"></div>
+        <figcaption><b>Figura 3.</b> Gerenciamento unificado entre ambientes (<i>Azure Arc — Unified Management Across Environments</i>)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-arc2" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Azure Arc</div>
+    <h2>O que o Arc gerencia fora do Azure e cenário prático</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <h3>Recursos hospedados fora do Azure</h3>
+        <div class="card branco" style="padding:8px 16px"><h4 style="margin:0">Servidores</h4></div>
+        <div class="card branco" style="padding:8px 16px"><h4 style="margin:0">Clusters do Kubernetes</h4></div>
+        <div class="card branco" style="padding:8px 16px"><h4 style="margin:0">Serviços de dados do Azure</h4></div>
+        <div class="card branco" style="padding:8px 16px"><h4 style="margin:0">SQL Server</h4></div>
+        <div class="card branco" style="padding:8px 16px"><h4 style="margin:0">Máquinas virtuais <span class="badge-r">versão prévia</span></h4></div>
+      </div>
+      <div class="col">
+        <h3>Cenário prático</h3>
+        <div class="hub">
+          <div class="no-h">Azure</div><div class="no-h">Datacenter local</div><div class="no-h">Outra nuvem pública</div>
+        </div>
+        <div class="hub-arrow">↓ ↓ ↓</div>
+        <div class="hub-arc">Azure Arc + Azure Resource Manager</div>
+        <div class="hub-arrow">↓</div>
+        <div class="card"><p style="font-size:20px">As equipes de operações aplicam <strong>controle consistente, política e inventário</strong> entre os ambientes, em vez de usar ferramentas desconectadas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-arm" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Azure Resource Manager (ARM)</div>
+    <h2>Autenticação, autorização e orquestração</h2>
+    <div class="cols c-5-6">
+      <div class="col">
+        <p style="font-size:21px">Serviço de implantação e gerenciamento do Azure: a camada que <strong>cria, atualiza e exclui</strong> recursos. Tudo o que você faz com recursos passa por ele.</p>
+        <div class="stack-step"><div class="n">1</div><div class="tx">A solicitação sai de uma ferramenta, API ou SDK.</div></div>
+        <div class="stack-step"><div class="n">2</div><div class="tx">O ARM a <b>recebe, autentica e autoriza</b>.</div></div>
+        <div class="stack-step"><div class="n">3</div><div class="tx">Envia ao <b>serviço do Azure</b>, que executa a ação.</div></div>
+        <p style="font-size:20px" class="sec">Mesma API para todas as ferramentas → resultados consistentes.</p>
+      </div>
+      <div class="col">
+        <figure class="fig">
+          <div class="imgbox h-fixo" style="aspect-ratio:1600/600"><img class="fig-img" data-mod="4" data-n="4" src="./modulo 4 imagens/imagem 4.png" alt="Azure Resource Manager Request Flow" onerror="imgFallback(this)"></div>
+          <figcaption><b>Figura 4.</b> Fluxo de solicitação do Azure Resource Manager</figcaption>
+        </figure>
+        <div class="card" style="padding:8px 16px">
+          <h4>Benefícios do ARM</h4>
+          <ul class="lista xs" style="margin:0">
+            <li style="margin-bottom:2px">Modelos declarativos (JSON) em vez de scripts.</li>
+            <li style="margin-bottom:2px">Gerencia recursos como um <strong>grupo</strong>; reimplantação consistente.</li>
+            <li style="margin-bottom:2px">Dependências definem a ordem; <strong>RBAC</strong> nativo e tags.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-iac" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Infraestrutura como Código (IaC)</div>
+    <h2>Modelos do Azure Resource Manager</h2>
+    <div class="cols c-1-1">
+      <div class="col">
+        <p style="font-size:21px"><strong>IaC</strong> é gerenciar a infraestrutura por <strong>código e modelos</strong> em vez de configuração manual: começa com CLI ou PowerShell e evolui para ambientes repetíveis com modelos ARM e Bicep.</p>
+        <div class="card">
+          <h3>Modelo ARM = JSON declarativo</h3>
+          <ul class="lista xs">
+            <li>Você define o <strong>estado final desejado</strong>.</li>
+            <li>O Azure <strong>valida</strong> o modelo antes e orquestra a criação na ordem certa e, quando possível, em paralelo.</li>
+            <li>Pode chamar scripts de PowerShell ou Bash antes ou depois da criação.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <h3>Benefícios dos modelos</h3>
+        <div class="card branco" style="padding:7px 16px"><h4 style="margin:0">Sintaxe declarativa</h4><p style="font-size:20px">Defina o que implantar, não cada passo.</p></div>
+        <div class="card branco" style="padding:7px 16px"><h4 style="margin:0">Resultados repetíveis</h4><p style="font-size:20px">Mesmo modelo, ambientes consistentes.</p></div>
+        <div class="card branco" style="padding:7px 16px"><h4 style="margin:0">Orquestração</h4><p style="font-size:20px">Ordem de dependência e paralelismo automáticos.</p></div>
+        <div class="card branco" style="padding:7px 16px"><h4 style="margin:0">Modularidade</h4><p style="font-size:20px">Componentes reutilizáveis e modelos aninhados.</p></div>
+        <div class="card branco" style="padding:7px 16px"><h4 style="margin:0">Extensibilidade</h4><p style="font-size:20px">Scripts de implantação para etapas extras.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="c4-bicep" data-cap="Capítulo 4 · Gerenciar e implantar">
+  <div class="s-body">
+    <div class="kicker">Bicep</div>
+    <h2>Sintaxe declarativa simplificada × JSON do ARM</h2>
+    <div class="cols c-4-6" style="flex:1">
+      <div class="col" style="gap:6px">
+        <p style="font-size:21px">Linguagem declarativa para implantar recursos via ARM; em geral <strong>mais simples e concisa</strong> que o JSON.</p>
+        <ul class="lista xs">
+          <li>Suporte a recursos e versões de API atuais.</li>
+          <li>Mais fácil de ler e escrever que o JSON.</li>
+          <li><strong>Idempotente</strong>: implantações consistentes.</li>
+          <li>Orquestração interna e <strong>módulos</strong> reutilizáveis.</li>
+        </ul>
+      </div>
+      <div class="col" style="gap:8px">
+<pre class="codigo" style="font-size:16px"><span class="rot-c">Bicep (exemplo ilustrativo)</span><span class="k">resource</span> stg <span class="c">'Microsoft.Storage/storageAccounts@2023-05-01'</span> = {
+  name: 'stifsdemo001'
+  location: resourceGroup().location
+  sku: { name: 'Standard_LRS' }
+  kind: 'StorageV2'
+}</pre>
+<pre class="codigo" style="font-size:16px"><span class="rot-c">Equivalente em JSON do ARM (trecho)</span>{
+  "type": "Microsoft.Storage/storageAccounts",
+  "apiVersion": "2023-05-01",
+  "name": "stifsdemo001",
+  "location": "[resourceGroup().location]",
+  "sku": { "name": "Standard_LRS" },
+  "kind": "StorageV2"
+}</pre>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:8px;font-size:19px;padding:8px 16px"><b>Síntese:</b> <strong>Portal</strong> e <strong>Cloud Shell</strong> (PowerShell/CLI) para interagir · <strong>Arc</strong> para estender a governança · <strong>ARM</strong>, <strong>modelos</strong> e <strong>Bicep</strong> para implantar como código. Revisão: o serviço para ambientes locais e multinuvem é o <strong>Azure Arc</strong>; IaC usa <strong>modelos ARM e Bicep</strong>.</div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CONCLUSÃO
+     ====================================================== -->
+<section class="slide" id="conclusao" data-cap="Conclusão">
+  <div class="s-body">
+    <div class="kicker">Conclusão</div>
+    <h2>Gerenciar e governar o Azure é planejar, controlar, observar e automatizar</h2>
+    <div class="grid g2">
+      <div class="card"><h3>1 · Custos</h3><p>Estimar com a calculadora, acompanhar no Gerenciamento de Custos, organizar com tags e escolher entre Reservas, Savings Plan e Spot.</p></div>
+      <div class="card"><h3>2 · Governança</h3><p>Purview para dados, Azure Policy para padrões, bloqueios contra exclusões acidentais e Service Trust Portal para conformidade.</p></div>
+      <div class="card"><h3>3 · Monitoramento</h3><p>Advisor, Service Health, Azure Monitor, Log Analytics, alertas e Application Insights dão visibilidade do ambiente.</p></div>
+      <div class="card"><h3>4 · Implantação</h3><p>Portal, Cloud Shell, PowerShell e CLI, Azure Arc, ARM e Bicep permitem gerenciar de forma consistente e como código.</p></div>
+    </div>
+    <div class="callout" style="margin-top:14px"><b>Mensagem final:</b> as ferramentas se complementam — e, mesmo com Copilot e agentes de IA, <strong>RBAC, Policy, bloqueios e a validação humana</strong> continuam garantindo que as mudanças fiquem dentro dos limites aprovados.</div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SLIDE FINAL — REFERÊNCIAS (ABNT)
+     ====================================================== -->
+<section class="slide" id="refs" data-cap="Referências">
+  <div class="s-body">
+    <div class="kicker">Referências bibliográficas</div>
+    <h2>Referências</h2>
+    <ul class="ref-lista">
+      <li>MICROSOFT. <b>Descrever o gerenciamento e a governança do Azure</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/training/paths/describe-azure-management-governance/. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Descrever o gerenciamento de custos no Azure</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/training/modules/describe-cost-management-azure/. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Descrever os recursos e as ferramentas de governança e conformidade no Azure</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/training/modules/describe-features-tools-azure-for-governance-compliance/. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Descrever as ferramentas de monitoramento no Azure</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/training/modules/describe-monitoring-tools-azure/. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Descrever recursos e ferramentas para gerenciar e implantar recursos do Azure</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/training/modules/describe-features-tools-manage-deploy-azure-resources/. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Gerenciamento de Custos da Microsoft: visão geral</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/azure/cost-management-billing/costs/overview-cost-management. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Microsoft Purview</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/purview/. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Azure Policy: visão geral</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/azure/governance/policy/overview. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Azure Monitor: visão geral</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/azure/azure-monitor/overview. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Azure Arc: visão geral</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/azure/azure-arc/overview. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Azure Resource Manager: visão geral</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/azure/azure-resource-manager/management/overview. Acesso em: 15 nov. 2026.</li>
+      <li>MICROSOFT. <b>Bicep: visão geral</b>. Microsoft Learn, 2026. Disponível em: https://learn.microsoft.com/pt-br/azure/azure-resource-manager/bicep/overview. Acesso em: 15 nov. 2026.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ---------- Controles de navegação ---------- -->
+<div class="nav" id="nav-esq">
+  <button id="btn-inicio" title="Início (Home)" aria-label="Ir para o início">⏮</button>
+  <button id="btn-ant" title="Anterior (←)" aria-label="Slide anterior">‹</button>
+</div>
+<div class="nav" id="nav-dir">
+  <button id="btn-tela" title="Tela cheia (F)" aria-label="Tela cheia">⛶</button>
+  <button id="btn-prox" title="Próximo (→ ou Espaço)" aria-label="Próximo slide">›</button>
+</div>
+
+</body>
+</html>

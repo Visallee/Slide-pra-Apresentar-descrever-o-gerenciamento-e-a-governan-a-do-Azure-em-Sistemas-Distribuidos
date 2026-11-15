@@ -1,0 +1,21 @@
+Apresentação — Descrever o Gerenciamento e a Governança do Azure
+IFS Campus Lagarto · Sistemas Distribuídos
+
+COMO USAR
+1. Extraia o .zip e abra a pasta no VS Code (ou dê duplo clique em index.html).
+2. Para usar as suas imagens, cole as 4 pastas ("modulo 1 imagens", ... "modulo 4 imagens")
+   na raiz do projeto, substituindo as que já estão aqui. Todos os caminhos são relativos.
+   - O script tenta automaticamente: "imagem 1.png", "Imagem 1.png", "imagem01.png",
+     "1.png", .jpg, .jpeg, .webp (maiúsculas/minúsculas) antes de mostrar um placeholder.
+   - Logo do IFS: salve como "modulo 1 imagens/logo ifs.png" (aparece na capa).
+
+NAVEGAÇÃO
+Setas ← →, Espaço, Home, End, botões discretos nos cantos, tecla F = tela cheia.
+Itens do Sumário (slides 2 e 3) são clicáveis. O slide atual fica na URL (#12).
+
+EXPORTAR PARA PDF
+Ctrl + P → Destino: Salvar como PDF → Margens: Nenhuma → ative "Gráficos de segundo plano".
+O tamanho de página já é 1280×720 (16:9), um slide por página.
+
+ESTRUTURA
+index.html · css/style.css · js/script.js · modulo 1..4 imagens/
