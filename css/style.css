@@ -239,13 +239,13 @@ figure.fig figcaption b { color: var(--verde-escuro); }
   background: linear-gradient(var(--verde) 0 88%, var(--vermelho) 88% 100%);
 }
 .capa-in { position: relative; flex: 1; padding: 34px 72px 30px 80px; display: flex; flex-direction: column; }
-.capa .logo-wrap { position: absolute; top: 28px; right: 80px; height: 150px; display: flex; align-items: center; justify-content: flex-end; }
-.capa .logo-wrap img { max-height: 150px; width: auto; object-fit: contain; }
+.capa .logo-wrap { position: absolute; top: 27px; left: 82px; height: 122px; display: flex; align-items: center; }
+.capa .logo-wrap img { height: 122px; width: auto; object-fit: contain; }
 .logo-ph {
   height: 70px; padding: 0 28px; display: flex; align-items: center; justify-content: center;
   border: 2px dashed var(--borda); border-radius: 10px; color: var(--texto-2); font-size: 16px;
 }
-.capa .inst-bloco { margin-top: 6px; }
+.capa .inst-bloco { margin-top: 6px; margin-left: 124px; }
 .capa .inst-nome { font-size: 26px; font-weight: 800; color: var(--verde-escuro); line-height: 1.25; }
 .capa .inst-sub { font-size: 23px; color: var(--texto); }
 .capa .disc { font-size: 23px; color: var(--texto-2); margin-top: 2px; }
