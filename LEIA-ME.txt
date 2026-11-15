@@ -10,8 +10,8 @@ COMO USAR
    - Logo do IFS: salve como "modulo 1 imagens/logo ifs.png" (aparece na capa).
 
 NAVEGAÇÃO
-Setas ← →, Espaço, Home, End, botões discretos nos cantos, tecla F = tela cheia.
-Itens do Sumário (slides 2 e 3) são clicáveis. O slide atual fica na URL (#12).
+Setas ← →, Espaço, Home, End, tecla F = tela cheia.
+Clique na metade esquerda da tela para voltar e na direita para avançar (sem botões). Itens do Sumário (slides 2 e 3) são clicáveis. O slide atual fica na URL (#12).
 
 EXPORTAR PARA PDF
 Ctrl + P → Destino: Salvar como PDF → Margens: Nenhuma → ative "Gráficos de segundo plano".

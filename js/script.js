@@ -107,7 +107,7 @@
       var tag = sl.getAttribute('data-cap') || '';
       var h = document.createElement('div');
       h.className = 's-header';
-      h.innerHTML = '<span class="inst">IFS · Campus Lagarto · Sistemas Distribuídos</span>' +
+      h.innerHTML = '<span class="inst"><img src="./modulo 1 imagens/IF.png" alt="" onerror="this.style.display=\'none\'">IFS · Campus Lagarto · Sistemas Distribuídos</span>' +
         (tag ? '<span class="cap-tag">' + tag + '</span>' : '');
       sl.insertBefore(h, sl.firstChild);
       var f = document.createElement('div');
@@ -143,9 +143,6 @@
     slides[atual].classList.add('ativo');
     var barra = document.getElementById('barra');
     if (barra) barra.style.width = (slides.length > 1 ? (atual / (slides.length - 1)) * 100 : 100) + '%';
-    var e = document.getElementById('btn-ant'), d = document.getElementById('btn-prox');
-    if (e) e.disabled = atual === 0;
-    if (d) d.disabled = atual === slides.length - 1;
     try { history.replaceState(null, '', '#' + (atual + 1)); } catch (err) { /* file:// em alguns navegadores */ }
   }
 
@@ -172,10 +169,12 @@
     escalar();
     window.addEventListener('resize', escalar);
     document.addEventListener('keydown', teclas);
-    document.getElementById('btn-ant').addEventListener('click', function () { ir(atual - 1); });
-    document.getElementById('btn-prox').addEventListener('click', function () { ir(atual + 1); });
-    document.getElementById('btn-tela').addEventListener('click', tela);
-    document.getElementById('btn-inicio').addEventListener('click', function () { ir(0); });
+    /* Clique: metade esquerda da tela volta, metade direita avança */
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-goto], a, input, textarea, select')) return;
+      if (window.getSelection && String(window.getSelection())) return; /* não atrapalha seleção de texto */
+      ir(e.clientX < window.innerWidth / 2 ? atual - 1 : atual + 1);
+    });
 
     var inicio = parseInt((location.hash || '').replace('#', ''), 10);
     atual = 0;
